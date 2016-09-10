@@ -18,20 +18,23 @@ This stuff may not always be in line with the lecture, discretion is advised.
 - Hidden files
 - Exit code of a command (0 typically indicates success)
 
-### Makefile
-
-- Define variables / define named targets / define file targets
-- Using variables
-- Why `.PHONY` is needed for named targets
-- What target is executed by default
-- How to execute a specific target
-- Dependencies of a target
-
 ### Compiler
 
 - What is the purpose of a compiler
 - Typical stages of a compiler
 - Calling `gcc` with additional flags
+
+### Makefile
+
+- Defining and using variables
+- Defining and invoking rules
+- Why `.PHONY` is needed
+- What target is build by default
+- How to build a specific target
+- Dependencies (*prerequisites*) of a target
+- Purpose of the targets `all` and `clean`
+- Forcing a rebuild of a target by passing `-B`
+- Predefined variables like `$(CC)` and `$(RM)`
 
 ### C Programming
 

@@ -1,6 +1,6 @@
 CFLAGS = -Wall -Wextra -Wpedantic -Werror -std=c99 -O2
 
-# Since this is the first named target, it will be executed by default.
+# Since this is the first target, it will be executed by default.
 .PHONY: all
 all: formatting
 
