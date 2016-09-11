@@ -10,10 +10,14 @@ This stuff may not always be in line with the lecture, discretion is advised.
 
 ### Bash / Commandline
 
-- Basics: `ls` / `cd` / `touch` / `mkdir` / `cp` / `mv` / `rm` / `less`
+- Basics: `echo` / `ls` / `cd` / `touch` / `mkdir` / `cp` / `mv` / `rm` / `pwd`
+  / `cat` / `less`
+- Filesystem structure
 - Getting help: `apropos` / `man` / `info`
 - Finding files: `find` / `grep`
 - Permissions: `chmod` / `chown`
+- Archives: `tar` / `zip` / `unzip`
+- Environment variables / `export` / `unset`
 - Executing binaries / `$PATH`
 - Hidden files
 - Exit code of a command (0 typically indicates success)
@@ -43,6 +47,7 @@ This stuff may not always be in line with the lecture, discretion is advised.
 ## References
 
 - [This Repo](https://git.io/viBjr)
+- [Learning the Shell](http://linuxcommand.org/lc3_learning_the_shell.php)
+- [`make` Documentation](https://www.gnu.org/software/make/manual/html_node/index.html)
 - [Google C++ Style Guide](https://google.github.io/styleguide/cppguide.html)
 - [Clang Format Documentation](http://clang.llvm.org/docs/ClangFormat.html)
-- [`make` Documentation](https://www.gnu.org/software/make/manual/html_node/index.html)
