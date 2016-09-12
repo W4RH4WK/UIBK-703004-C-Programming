@@ -8,21 +8,14 @@ This stuff may not always be in line with the lecture, discretion is advised.
 
 ## What you should know by now
 
-### Bash / Commandline
+### Linux / Shell
 
-- Basics: `echo` / `ls` / `cd` / `touch` / `mkdir` / `cp` / `mv` / `rm` / `pwd`
-  / `cat` / `less`
-- Filesystem structure
-- Getting help: `apropos` / `man` / `info`
-- Finding files: `find` / `grep`
-- Permissions: `chmod` / `chown`
-- Archives: `tar` / `zip` / `unzip`
-- Environment variables / `export` / `unset`
-- Executing binaries / `$PATH`
-- Hidden files
-- Exit code of a command (0 typically indicates success)
+Everything taught in the *Brückenkurs* (see references). The more you know
+about the system you are using, the better. Getting the big picture as well as
+its details is the key to understanding the interaction of components (kernel,
+operating system, programs, shell, networks, ...).
 
-### Compiler
+### Technical Stuff
 
 - What is the purpose of a compiler
 - Typical stages of a compiler
@@ -47,6 +40,7 @@ This stuff may not always be in line with the lecture, discretion is advised.
 ## References
 
 - [This Repo](https://git.io/viBjr)
+- [Brückenkurs (internal)](https://iis.uibk.ac.at/courses/2015w/703000/start)
 - [Learning the Shell](http://linuxcommand.org/lc3_learning_the_shell.php)
 - [`make` Documentation](https://www.gnu.org/software/make/manual/html_node/index.html)
 - [Google C++ Style Guide](https://google.github.io/styleguide/cppguide.html)
