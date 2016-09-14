@@ -78,5 +78,6 @@ operating system, programs, shell, networks, ...).
 - [Learning the Shell](http://linuxcommand.org/lc3_learning_the_shell.php)
 - [17 Unix Rules](https://en.wikipedia.org/wiki/Unix_philosophy#Eric_Raymond.E2.80.99s_17_Unix_Rules)
 - [`make` Documentation](https://www.gnu.org/software/make/manual/html_node/index.html)
+- [More exercises](https://projecteuler.net/)
 - [Google C++ Style Guide](https://google.github.io/styleguide/cppguide.html)
 - [Clang Format Documentation](http://clang.llvm.org/docs/ClangFormat.html)
