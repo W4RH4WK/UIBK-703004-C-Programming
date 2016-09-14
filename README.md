@@ -8,25 +8,26 @@ This stuff may not always be in line with the lecture, discretion is advised.
 
 ## Don't Panic!
 
-Soon or later you will run into problems, follow these bullets:
+Sooner or later you will run into problems, follow these bullets:
 
 1. find problem
 2. isolate problem
 3. understand problem
 4. fix problem
 5. verify fix
-6. rinse and repeat
 
 ### Getting Help
 
-1. **from the commandline:** use the tools `apropos` and `man` to get
-   information about general commands, system calls, config files, etc.
+1. **from the commandline:** use tools like `apropos` and `man` to get
+   information about general commands, functions, system calls, config files,
+   etc.
 
 2. **read the fucking manual:** if you run into problems consider reading the
    manual or provided documentation before moving on.
 
 3. **Google is your friend:** Google can help you out even when the
    documentation can not. People might have run into the same problem as you.
+   You may use other search engines, just stay away from Bing.
 
 4. **IRC / forum / mailing list / bug tracker / email:** neither the manual nor
    Google helped you solving the problem? Take a step back and revisit the
