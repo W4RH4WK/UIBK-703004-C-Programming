@@ -6,6 +6,52 @@ learning experience.
 
 This stuff may not always be in line with the lecture, discretion is advised.
 
+## What you should know by now
+
+This list will be extended over time and serves as a checklist for stuff you
+should know. Some of these bullets are not handled by the lecture, it is your
+responsibility to learn them on your own.
+
+### Linux / Shell
+
+Basically everything taught in the *Brückenkurs* (see references). The more you
+know about the system you are using, the better. Understanding how components
+(kernel, operating system, programs, shell, networks, ...) interact is key.
+
+- File system hierarchy: `ls` / `pwd` / `cd` / `mkdir` / `cp` / `mv` / `rm` / `touch`
+- Viewing: `cat` / `less` / `head` / `tail` / `df` / `du`
+- Finding things: `find` / `grep` / `whereis` / `whoami`
+- Getting help: `apropos` / `man` / `info` / `file` / `which` / `type`
+- Permissions: `chmod` / `chown`
+- Archives: `tar` / `zip` / `unzip` / `xz` / `gzip` / `gunzip`
+- Environment variables / `export` / `unset`
+- Executing binaries / `$PATH`
+- Hidden files / `ls -l` / `ls -a`
+- Exit code of a command: `$?`
+- IO redirect: `<` / `>` / `<<` / `>>` / `<<<` / `2>` / `2>&1` / `|`
+
+### Technical Stuff
+
+- What is the purpose of a compiler
+- Typical stages of a compiler
+- Calling `gcc` with additional flags (C standard, enables warnings)
+
+### Makefile
+
+- Defining and using variables
+- Defining and invoking rules
+- Why `.PHONY` is needed
+- What target is build by default
+- How to build a specific target
+- Dependencies (*prerequisites*) of a target
+- Purpose of the targets `all` and `clean`
+- Forcing a rebuild of a target by passing `-B`
+- Predefined variables like `$(CC)` and `$(RM)`
+
+### C Programming
+
+- `Hello World` example
+
 ## Don't Panic!
 
 Sooner or later you will run into problems, follow these bullets:
@@ -39,37 +85,6 @@ Sooner or later you will run into problems, follow these bullets:
    information. Add log files and similar info dumps to your question,
    otherwise people won't be able to help you. Be precise and state whether you
    talk about facts or presumptions.
-
-## What you should know by now
-
-### Linux / Shell
-
-Everything taught in the *Brückenkurs* (see references). The more you know
-about the system you are using, the better. Getting the big picture as well as
-its details is the key to understanding the interaction of components (kernel,
-operating system, programs, shell, networks, ...).
-
-### Technical Stuff
-
-- What is the purpose of a compiler
-- Typical stages of a compiler
-- Calling `gcc` with additional flags
-
-### Makefile
-
-- Defining and using variables
-- Defining and invoking rules
-- Why `.PHONY` is needed
-- What target is build by default
-- How to build a specific target
-- Dependencies (*prerequisites*) of a target
-- Purpose of the targets `all` and `clean`
-- Forcing a rebuild of a target by passing `-B`
-- Predefined variables like `$(CC)` and `$(RM)`
-
-### C Programming
-
-- `Hello World` example
 
 ## References
 
