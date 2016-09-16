@@ -29,6 +29,7 @@ know about the system you are using, the better. Understanding how components
 - Hidden files / `ls -l` / `ls -a`
 - Exit code of a command: `$?`
 - IO redirect: `<` / `>` / `<<` / `>>` / `<<<` / `2>` / `2>&1` / `|`
+- Managing your software / package management
 
 ### Technical Stuff
 
@@ -95,4 +96,13 @@ Sooner or later you will run into problems, follow these bullets:
 - [`make` Documentation](https://www.gnu.org/software/make/manual/html_node/index.html)
 - [More exercises](https://projecteuler.net/)
 - [Google C++ Style Guide](https://google.github.io/styleguide/cppguide.html)
+- [Learn X in Y minutes, where X=make](https://learnxinyminutes.com/docs/make/)
+- [Learn X in Y minutes, where X=c](https://learnxinyminutes.com/docs/c/)
 - [Clang Format Documentation](http://clang.llvm.org/docs/ClangFormat.html)
+
+## Reference System
+
+I'll use a virtualized, updated Ubuntu 16.04 LTS (64 Bit) as reference system.
+But you don't have to mimic this, hardly anything we do in this course is
+system specific. All modern GNU/Linux operating systems should behave similar
+to our doings.
