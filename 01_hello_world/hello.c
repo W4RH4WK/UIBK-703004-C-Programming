@@ -30,6 +30,7 @@ int main(void) {
 	 *
 	 */
 	printf("Hello World\n");
+	/*                  ^--- line break */
 
 	/* `main` returns the exit code of the program. */
 	return EXIT_SUCCESS;
