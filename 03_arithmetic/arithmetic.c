@@ -127,8 +127,36 @@ int main(void) {
 
 		/* Here `a` is incremented after it is used. */
 		printf("a++ = %d\n", a++);
-		printf("a   = %d\n", a);
+		printf("a   = %d\n\n", a);
 	}
+
+	/* # Short circuit evaluation
+	 *
+	 * When using boolean operations like `&&` and `||` the evaluation is
+	 * terminated as soon as the result is known. This concept is known as
+	 * short circuit evaluation.
+	 *
+	 * In this example `b` is initialized with `true || ++a`. Since `true` ORed
+	 * with anything will always give try, the evaluation terminates
+	 * immediately, not even looking at `++a`. Hence `a` is still 2 after `b`'s
+	 * initialization.
+	 */
+	{
+		int a = 2; bool b = true || ++a; printf("a = %d\n", a);
+	}
+
+	/* # Sequence points
+	 *
+	 * This is an exercise for the interested reader, try to compile following
+	 * block. You should encounter an error about possible undefined behaviour.
+	 * Lookup the phrase *sequence point* and figure out why.
+	 */
+	/*
+	{
+		int a = 3;
+		a = ++a;
+	}
+	*/
 
 	return EXIT_SUCCESS;
 }
