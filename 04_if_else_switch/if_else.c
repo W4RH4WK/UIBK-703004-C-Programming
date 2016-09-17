@@ -27,6 +27,30 @@ int main(void) {
 		puts("a must be equal to b");
 	}
 
+	/* # Ternary operator
+	 *
+	 * There is also something named the ternary operator. It is similar to to
+	 * and `if else`, but it can be used inside expressions.
+	 *
+	 * Following two blocks are equivalent;
+	 */
+	{
+		int a = 2 < 3 ? 4 : 5;
+	}
+	{
+		int a;
+		if (2 < 3) {
+			a = 4;
+		} else {
+			a = 5;
+		}
+	}
+
+	/* Can be used like this. */
+	printf("2 < 3 is %s\n", 2 < 3 ? "true" : "false");
+
+	/* Use it whenever it makes code more readable! */
+
 	return EXIT_SUCCESS;
 
 }

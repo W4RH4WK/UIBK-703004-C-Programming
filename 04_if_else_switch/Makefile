@@ -1,4 +1,5 @@
-CFLAGS ?= -Wall -Wextra -Wpedantic -Werror -Wno-unused-variable -std=c99 -O2
+CFLAGS ?= -Wall -Wextra -Wpedantic -Werror -std=c99 -O2 \
+		-Wno-unused-variable -Wno-unused-but-set-variable
 
 .PHONY: all
 all: if_else switch
