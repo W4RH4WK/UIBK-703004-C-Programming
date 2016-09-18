@@ -130,6 +130,27 @@ int main(void) {
 	/* following statement will result in a compile-time error */
 	/* my_const = 21; */
 
+	/* # Scopes
+	 *
+	 * You can open a new scope whenever you need one. This can be helpful to
+	 * group parts within a function together.
+	 *
+	 * Variables declared within it are only valid for that scope (and scopes
+	 * within that scope). You may even give them the same name as a variable
+	 * from the parent scope. This is called shadowing.
+	 */
+	{
+		int another_variable = 2;
+
+		/* lets shadow a variable */
+		int my_const = 13;
+		printf("my_const within another scope = %d\n", ++my_const);
+	}
+
+	/* `another_variable` is not available here */
+	/* printf("another_variable = %d\n", another_variable); */
+	printf("my_const outside is still = %d\n", my_const);
+
 	return EXIT_SUCCESS;
 
 }
