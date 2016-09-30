@@ -1,9 +1,8 @@
-CFLAGS ?= -Wall -Wextra -Wpedantic -Werror -std=c99 -O2 \
-		-Wno-unused-variable -Wno-unused-but-set-variable
+CFLAGS ?= -Wall -Wextra -Wpedantic -Werror -std=c99 -O2
 
 .PHONY: all
-all: while for
+all: while for loop_control
 
 .PHONY: clean
 clean:
-	$(RM) while for
+	$(RM) while for loop_control

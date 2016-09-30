@@ -13,7 +13,7 @@ int main(void) {
 	 * `<init>`, `<condition>` and `<step>` can each be omitted if necessary. A
 	 * typical for-loop could look like this.
 	 */
-	for(int i = 0; i < 10; ++i) {
+	for (int i = 0; i < 10; ++i) {
 		printf("Iteration: %d\n", i);
 	}
 
