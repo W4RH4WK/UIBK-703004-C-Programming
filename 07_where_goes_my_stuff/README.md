@@ -1,4 +1,4 @@
-# Where goes my Stuff?!
+# Where goes my Stuff ?!
 
 In the previous section we learned about functions and recursion. Before we
 advance with C programming, I'd like to tell you about how a program deals with
@@ -9,15 +9,15 @@ take short peek behind the scenes.
 
 A modern operating system abstracts away the *real* (physical) memory from a
 running program (process). Each program sees only his own memory image. This
-happens because memory for a program is *virtualized* by the operation system.
-Programs are isolated from each other.
+happens because memory used by each program is *virtualized* by the operation
+system. Programs are isolated from each other.
 
 Later, when talking about *pointers* we'll learn how to address certain
 locations in memory. All addresses we encounter are virtual, specific to the
-currently running program and are translated by your operating system (together
-with the memory management unit MMU) to physical memory addresses. Ideally this
-is completely transparent, meaning you won't even notice until you start
-looking for it.
+currently running program, and are translated by your operating system
+(together with the memory management unit MMU) to physical memory addresses.
+Ideally this is completely transparent, meaning you won't even notice until you
+start looking for it.
 
 While each byte in memory can be addressed, not every byte gets a *mapping*
 from physical memory to virtual memory. Physical memory is divided into evenly
@@ -28,10 +28,10 @@ program. This makes memory management and the translation process much easier.
   <img alt="Paging" src="gfx/paging.png" />
 </p>
 
-Above figure[1] shows physical memory divided into pages. Multiple programs
-(processes) P1--P6 have some pages mapped to their virtual memory. A program
-can store data only inside these areas, accessing unmapped memory is not
-allowed.
+Above figure (modified, original from [1]) shows an example of physical memory
+divided into pages. Multiple programs (processes) P1--P6 have some pages mapped
+to their virtual memory. A program can store data only inside these areas,
+accessing unmapped memory is not allowed.
 
 [1]: Unix Internals by Uresh Vahalia
 
@@ -39,21 +39,28 @@ allowed.
 
 ### `.text`
 
-When a program is started, one essential part is loading the actual program,
-the compiled code which will be executed by the system, into memory. The
-section of memory holding this data (instructions) is referred to as the
-`.text` section. As mentioned, it is one of the first thing which gets loaded
-and usually is not altered during runtime of the program.
+When you compile a program from source, you receive a *runable* binary. This
+binary contains the compiled code, data and a few other things. Upon running
+this binary (aka starting the program) a part of your operating system (the
+loader) loads relevant parts of that binary file into memory.
+
+The section containing the compiled code, is referred to as the `.text`
+section. It contains the instructions which will be executed by your system.
 
 ### Stack
 
-This one is more complicated --- the stack is required to properly call and
-return from functions. Each call of a function corresponds to a small chunk of
-data (stack frame) containing argument values, local variables together with
-some bookkeeping (saved return address, saved base pointer). Stack frames are
-put on top of each other for each consecutive call. If a function returns the
-stack frame is remove from the top of the stack. Following figure illustrates a
-stack with mutliple frames.
+This one is a little more complicated --- the stack is a data structure used to
+properly call and return from functions. It is located in memory and consists
+of a sequence of so-called *stack frames*. Each stack frame corresponds to a
+function call and contains argument values, local variables together with some
+bookkeeping (saved return address, saved base pointer).
+
+Stack frames are put on top of each other (hence the name *stack*) for each
+consecutive call. One could say *a new frame is pushed onto the stack*. When a
+function returns the stack frame is removed from the top of the stack. Also
+known as *popping a frame of the stack*.
+
+Following figure illustrates a stack with multiple frames:
 
 <p align="center">
   <img alt="Stack Frames" src="gfx/stackframes.png" width="65%" />
