@@ -57,8 +57,8 @@ bookkeeping (saved return address, saved base pointer).
 
 Stack frames are put on top of each other (hence the name *stack*) for each
 consecutive call. One could say *a new frame is pushed onto the stack*. When a
-function returns the stack frame is removed from the top of the stack. Also
-known as *popping a frame of the stack*.
+function returns, the stack frame is removed from the top of the stack. Also
+known as *popping a frame off the stack*.
 
 Following figure illustrates a stack with multiple frames:
 
@@ -66,15 +66,15 @@ Following figure illustrates a stack with multiple frames:
   <img alt="Stack Frames" src="gfx/stackframes.png" width="65%" />
 </p>
 
-You may already be asking, but what happens when there is no memory for
-additional stack frames since we used up all of it. Well, your program simply
-crashes --- this is known as a *stack overflow*.
+You may already be asking, what happens when there is no memory for additional
+stack frames since we used up all of it. Well, your program simply crashes ---
+this is known as a *stack overflow*.
 
 This should show you that calling functions, and especially recursion does not
 come for free. Depending on the complexity of your function, this overhead
 might be quite big.
 
-### Data
+### Data (`.data`)
 
 Now that we know where our local variables are stored (for each function call),
 we can talk about global variables. Global variables, as well as constants,
@@ -89,7 +89,7 @@ updated a global variable's value, but you do not add or remove one.
 When you don't know how much data will be needed at compile-time (statically)
 you have the option to request (*allocate*) the required amount at runtime
 (dynamically) from the operating system. You are in charge of the memory chunk
-hand over to you by the operating system (together with what the standard
+delegated over to you by the operating system (together with what the standard
 library provides). Nevertheless dynamically allocated memory lives inside the
 *heap* section of your virtual memory image.
 
