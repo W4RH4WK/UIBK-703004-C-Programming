@@ -1,5 +1,5 @@
-#include <stdio.h>		/* defines standard IO operations like `printf` */
-#include <stdlib.h>		/* defines EXIT_SUCCESS / EXIT_FAILURE */
+#include <stdio.h>   /* defines standard IO operations like `printf` */
+#include <stdlib.h>  /* defines EXIT_SUCCESS / EXIT_FAILURE */
 
 /* Main entry point of our program.
  *
@@ -30,9 +30,11 @@ int main(void) {
 	 *
 	 */
 	printf("Hello World\n");
-	/*                  ^--- line break */
+	/*                 ^^--- line break */
 
-	/* `main` returns the exit code of the program. */
+	/* `main` returns the exit code of the program, which indicates whether the
+	 * program was successful or not.
+	 */
 	return EXIT_SUCCESS;
 
 }
