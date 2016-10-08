@@ -1,0 +1,75 @@
+% convert -density 300 -background white -alpha remove memory.pdf memory.png
+
+\tikzstyle{var} = [
+    draw,
+    ultra thick,
+    inner sep=0
+]
+
+\tikzstyle{ref} = [
+    dashed,
+    thick
+]
+
+\tikzstyle{ptr} = [
+    thick,
+    -{Latex[length=2.7mm]}
+]
+
+\foreach \frame in {1,...,6} {
+    \begin{tikzpicture}
+        \node at (2,0.5) {Memory};
+        \draw[xstep=0.5cm,ystep=0.5cm,gray,ultra thin,gray] (0,0) grid (4,-8);
+        \foreach \i [evaluate=\i as \x using -\i*16] in {0,-0.5,...,-7.9} {
+            \pgfmathsetbasenumberlength{8};
+            \node[anchor=east] at (0,\i-0.25) {\tt 0x\pgfmathhex{\x}\pgfmathresult};
+        }
+
+        \ifthenelse{\frame > 1}{
+            \Large
+            \matrix (table) [anchor=north west,matrix of nodes,ampersand replacement=\&,nodes={text width=2.8cm,text height=0.4cm}] at (5,0) {
+                                        Type    \& Name          \& Value               \& Size          \& Address             \\ \hline
+                                        char    \& \texttt{var1} \& \texttt{'A'}        \& \SI{1}{\byte} \& \texttt{0x0000000a} \\
+                                        int     \& \texttt{var2} \& $12$                \& \SI{4}{\byte} \& \texttt{0x0000001a} \\
+                                        double  \& \texttt{var3} \& $3.14\dots$         \& \SI{8}{\byte} \& \texttt{0x00000028} \\
+                \ifthenelse{\frame > 2}{int*    \& \texttt{ptr1} \& \texttt{0x0000001a} \& \SI{4}{\byte} \& \texttt{0x0000003c} \\}{}%
+                \ifthenelse{\frame > 3}{double* \& \texttt{ptr2} \& \texttt{0x00000028} \& \SI{4}{\byte} \& \texttt{0x00000050} \\}{}%
+                \ifthenelse{\frame > 4}{int**   \& \texttt{ptr3} \& \texttt{0x0000003c} \& \SI{4}{\byte} \& \texttt{0x00000064} \\}{}%
+                \ifthenelse{\frame > 5}{int***  \& \texttt{ptr4} \& \texttt{0x00000064} \& \SI{4}{\byte} \& \texttt{0x00000072} \\}{}\\
+            };
+
+            \node[var,fit={( 1  ,-0.5) ( 1.5,-1  )}] (c1) {};
+            \draw[ref] (c1.east) parabola (table-2-1.west);
+
+            \node[var,fit={( 1  ,-1.5) ( 3  ,-2  )}] (i2) {};
+            \draw[ref] (i2.east) parabola (table-3-1.west);
+
+            \node[var,fit={( 0  ,-2.5) ( 4  ,-3  )}] (d3) {};
+            \draw[ref] (d3.east) parabola (table-4-1.west);
+        }{}
+
+        \ifthenelse{\frame > 2}{
+            \node[var,fit={( 2  ,-3.5) ( 4  ,-4  )}] (ptr1) {};
+            \draw[ref] (ptr1.east) parabola (table-5-1.west);
+            \draw[ptr] ($(ptr1.west)+(0.25,0)$) -- ($(i2.west)+(0.25,0)$);
+        }{}
+
+        \ifthenelse{\frame > 3}{
+            \node[var,fit={( 0  ,-5  ) ( 2  ,-5.5)}] (ptr2) {};
+            \draw[ref] (ptr2.east) parabola (table-6-1.west);
+            \draw[ptr] ($(ptr2.west)+(0.25,0)$) -- ($(d3.south west)+(0.25,0)$);
+        }{}
+
+        \ifthenelse{\frame > 4}{
+            \node[var,fit={( 2  ,-6  ) ( 4  ,-6.5)}] (ptr3) {};
+            \draw[ref] (ptr3.east) parabola (table-7-1.south west);
+            \draw[ptr] ($(ptr3.west)+(0.25,0)$) -- ($(ptr1.south west)+(0.25,0)$);
+        }{}
+
+        \ifthenelse{\frame > 5}{
+            \node[var,fit={( 1  ,-7  ) ( 3  ,-7.5)}] (ptr4) {};
+            \draw[ref] (ptr4.east) parabola (table-8-1.south west);
+            \draw[ptr] ($(ptr4.west)+(0.25,0)$) -- ($(ptr3.west)+(0.25,0)$);
+        }{}
+    \end{tikzpicture}
+}
