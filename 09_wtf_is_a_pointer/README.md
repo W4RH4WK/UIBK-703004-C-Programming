@@ -1,9 +1,10 @@
 # WTF is a Pointer
 
 This section will describe what pointers are, what can be done with them and so
-and so forth. In section `07` we learned that variables occupy space in memory,
-we also learned about different sections like the stack --- for now we don't
-care about sections and how exactly variables are organized in memory.
+on and so forth. In section `07` we learned that variables occupy space in
+memory, we also learned about the different sections like the stack --- for
+now, we don't care about sections and how exactly variables are organized in
+memory.
 
 ## Addressing Memory
 
@@ -21,9 +22,9 @@ for now.
 ### Adding Variables
 
 Each variable has a type, holds a value and occupies space somewhere in memory.
-This is illustrated by the next image, which also shows a table containing said
-information about 3 variables. Sizes, values and names are just example values,
-but the concept should already look familiar.
+The next image illustrates this by showing 3 variables and a table, filled with
+that information. Sizes, values and names are just example values, but the
+concept should already look familiar.
 
 The *address of a variable* is always the address of the first occupied cell.
 Given this starting address and the size (which can be inferred from the type)
