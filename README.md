@@ -95,6 +95,7 @@ Sooner or later you will run into problems, follow these bullets:
 - [17 Unix Rules](https://en.wikipedia.org/wiki/Unix_philosophy#Eric_Raymond.E2.80.99s_17_Unix_Rules)
 - [`make` Documentation](https://www.gnu.org/software/make/manual/html_node/index.html)
 - [More exercises](https://projecteuler.net/)
+- [More conventional C tutorial](http://beej.us/guide/bgc/output/html/singlepage/bgc.html)
 - [Google C++ Style Guide](https://google.github.io/styleguide/cppguide.html)
 - [Learn X in Y minutes, where X=make](https://learnxinyminutes.com/docs/make/)
 - [Learn X in Y minutes, where X=c](https://learnxinyminutes.com/docs/c/)
