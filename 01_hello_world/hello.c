@@ -24,9 +24,9 @@ int main(void) {
 	 * also has a man-page. Attach the related *section* to your man invokation
 	 * like this:
 	 *
-	 *     $ man printf			# man-page of the `printf` command
-	 *     $ man 1 printf		# same as above
-	 *     $ man 3 printf		# man-page of the C function `printf`
+	 *     $ man printf         # man-page of the `printf` command
+	 *     $ man 1 printf       # same as above
+	 *     $ man 3 printf       # man-page of the C function `printf`
 	 *
 	 */
 	printf("Hello World\n");
