@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="generator" content="pandoc">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+$for(author-meta)$
+		<meta name="author" content="$author-meta$">
+$endfor$
+$if(date-meta)$
+		<meta name="dcterms.date" content="$date-meta$">
+$endif$
+
+		<title>$if(title-prefix)$$title-prefix$ – $endif$$pagetitle$</title>
+
+		<!-- Reveal.js -->
+		<link rel="stylesheet" href="$TPLDIR$/reveal.js/css/reveal.css">
+		<link rel="stylesheet" href="$TPLDIR$/reveal.js/css/theme/white.css">
+
+		<!-- Highlight.js -->
+		<link rel="stylesheet" href="$TPLDIR$/highlight.js/styles/vs.css">
+	</head>
+	<body>
+<div class="reveal">
+	<div class="slides">
+
+$if(title)$
+<section>
+	<h1 class="title">$title$</h1>
+$if(subtitle)$
+	<h1 class="subtitle">$subtitle$</h1>
+$endif$
+$for(author)$
+	<h2 class="author">$author$</h2>
+$endfor$
+$if(date)$
+	<h3 class="date">$date$</h3>
+$endif$
+</section>
+$endif$
+$if(toc)$
+<section id="$idprefix$TOC">
+$toc$
+</section>
+$endif$
+
+$body$
+	</div>
+</div>
+
+		<!-- Reveal.js -->
+		<script src="$TPLDIR$/reveal.js/lib/js/head.min.js"></script>
+		<script src="$TPLDIR$/reveal.js/js/reveal.js"></script>
+		<script>
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: false,
+				slideNumber: 'c/t',
+				transition: 'slide',
+				zoomKey: 'ctrl',
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					// { src: 'plugin/highlight/highlight.js', async: true},
+					{ src: '$TPLDIR$/reveal.js/plugin/notes/notes.js', async: true },
+					{ src: '$TPLDIR$/reveal.js/plugin/print-pdf/print-pdf.js', async: true},
+					{ src: '$TPLDIR$/reveal.js/plugin/zoom-js/zoom.js', async: true}
+				]
+			});
+		</script>
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement('link');
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			if (window.location.search.match(/print-pdf/gi)) {
+				link.href = '$TPLDIR$/reveal.js/css/print/pdf.css';
+			} else {
+				link.href = '$TPLDIR$/reveal.js/css/print/paper.css';
+			}
+			document.getElementsByTagName('head')[0].appendChild(link);
+		</script>
+
+		<!-- Highlight.js -->
+		<script src="$TPLDIR$/highlight.js/highlight.pack.js" type="text/javascript"></script>
+		<script>hljs.initHighlightingOnLoad();</script>
+
+		<!-- MathJax -->
+		<script src="$TPLDIR$/MathJax/MathJax.js?config=TeX-AMS_HTML" type="text/javascript"></script>
+		<script>
+			MathJax.Hub.Config({
+				MathMenu: { showFontMenu: true, showLocale: false },
+				"HTML-CSS": { preferredFont: "STIX" }
+			});
+		</script>
+	</body>
+</html>
