@@ -1,9 +1,9 @@
-# Using `?=` instead of `=` allows one to set this variable to a different
-# value when calling make. Try this:
+# Makefile variables can be set directly from the commandline, setting
+# variables inside the Makefile will then be skipped. Try this:
 #
 #     $ make CFLAGS=-O0
 #
-CFLAGS ?= -Wall -Wextra -Wpedantic -Werror -std=c99 -O2
+CFLAGS = -Wall -Wextra -Wpedantic -Werror -std=c99 -O2
 
 .PHONY: all
 all: hello
