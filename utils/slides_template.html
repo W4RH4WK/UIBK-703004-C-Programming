@@ -69,17 +69,15 @@ $body$
 			});
 		</script>
 
-		<!-- Printing and PDF exports -->
+		<!-- PDF exports -->
 		<script>
-			var link = document.createElement('link');
-			link.rel = 'stylesheet';
-			link.type = 'text/css';
 			if (window.location.search.match(/print-pdf/gi)) {
+				var link = document.createElement('link');
+				link.rel = 'stylesheet';
+				link.type = 'text/css';
 				link.href = '$TPLDIR$/reveal.js/css/print/pdf.css';
-			} else {
-				link.href = '$TPLDIR$/reveal.js/css/print/paper.css';
+				document.getElementsByTagName('head')[0].appendChild(link);
 			}
-			document.getElementsByTagName('head')[0].appendChild(link);
 		</script>
 
 		<!-- Highlight.js -->
