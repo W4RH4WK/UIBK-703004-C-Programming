@@ -1,0 +1,19 @@
+.reveal .slide-number {
+	bottom: 26px;
+	right: 16px;
+}
+
+.reveal .slide-number-a,
+.reveal .slide-number-delimiter,
+.reveal .slide-number-b {
+	font-size: 42px;
+}
+
+.reveal .slide-number-pdf {
+	color: #444;
+	background: none;
+}
+
+.reveal .progress {
+	height: 10px;
+}

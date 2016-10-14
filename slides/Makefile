@@ -1,3 +1,10 @@
+WD     = $(dir $(abspath $(lastword $(MAKEFILE_LIST))))
+TPLDIR = ../templates
+
+SRC  = $(wildcard *.md)
+HTML = $(SRC:.md=.html)
+PDF  = $(SRC:.md=.pdf)
+
 PAN             = pandoc
 PANFLAGS        = --smart
 PANFLAGS_SLIDES = --to revealjs \
@@ -10,16 +17,12 @@ TOPDF      = wkhtmltopdf
 TOPDFFLAGS = --orientation Landscape \
              --page-size A4
 
-WD     = $(dir $(abspath $(lastword $(MAKEFILE_LIST))))
-TPLDIR = ../templates
-SRC    = $(wildcard *.md)
-
 .PHONY: all
-all: $(SRC:.md=.html) $(SRC:.md=.pdf)
+all: $(HTML) $(PDF)
 
 .PHONY: clean
 clean:
-	$(RM) $(SRC:.md=.html) $(SRC:.md=.pdf)
+	$(RM) $(HTML) $(PDF)
 
 %.html: %.md
 	$(PAN) $(PANFLAGS) $(PANFLAGS_SLIDES) -o $@ $<
