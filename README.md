@@ -1,6 +1,6 @@
 # Introduction to C Programming 2016
 
-This repository is intended for group number 4 and is not essential for
+This repository is intended for groups 4 and 5, and is not essential for
 completing this course. All files provided are simply here to support your
 learning experience.
 
