@@ -137,7 +137,7 @@ int main(void) {
 ```
 
 Without pointers a swap function would not be possible since everything in C is
-passed-by-value. The mechanism we just created is referred to as
+call-by-value. The mechanism we just created is referred to as
 call-by-reference since we call `swap` with *references* (another term for
 pointer) to our variables.
 
