@@ -52,6 +52,10 @@ know about the system you are using, the better. Understanding how components
 ### C Programming
 
 - `Hello World` example
+- Variables / Types / `printf`
+- Arithmetic / Conditionals
+- `if` / `else`
+- `while`
 
 ## Don't Panic!
 
