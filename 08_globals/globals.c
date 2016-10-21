@@ -33,7 +33,10 @@ const int ULTIMATE_ANSWER = 42;
 /* Another way is by using the pre-processor. */
 #define MY_AWESOME_CONSTANT 1337
 
-/* Or by using an `enum`, more about enums later on. */
+/* Or by using an `enum`, more about enums later on.
+ *
+ * see: <http://stackoverflow.com/a/1674459>
+ */
 enum { HALF_TRUTH = 21 };
 
 /* All three methods have their own benefits and drawbacks. But they exceed the
