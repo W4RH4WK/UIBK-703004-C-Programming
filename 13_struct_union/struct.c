@@ -5,8 +5,8 @@
  * group data together.
  */
 struct Person {
-	char *firstname;
-	char *lastname;
+	const char *firstname;
+	const char *lastname;
 	int age;
 	float height;
 };
