@@ -4,7 +4,7 @@
 
 ## `whoami`
 
-- **Alex Hirsch**
+- **Alex Hirsch** (Room 2W05)
 - working at DPS on the *INSIEME* Compiler
 - current focus on program analysis (at compile time)
 - currently using C/C++ and Haskell
