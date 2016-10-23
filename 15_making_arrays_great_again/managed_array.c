@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+#define EXAMPLE_SIZE 42
+
 /* This will be our *object* holding relevant data for the management. The of
  * this construct should handle it as a block box and use only provided
  * functions with it. */
@@ -99,7 +101,13 @@ void Array_print(const Array* this) {
 int main(void) {
 
 	/* create one such array */
-	Array* a = Array_create(42);
+	Array* a = Array_create(EXAMPLE_SIZE);
+
+	/* check for errors */
+	if (a == NULL) {
+		fprintf(stderr, "Could not allocate Array of size %d\n", EXAMPLE_SIZE);
+		return EXIT_FAILURE;
+	}
 
 	/* and fill them */
 	for (int i = 0; i < Array_size(a); ++i) {
@@ -111,9 +119,9 @@ int main(void) {
 	printf("\n\n");
 
 	/* Out-of-bound access will be prevented by the wrapper. */
-	Array_set(a, 102, 25);
+	Array_set(a, EXAMPLE_SIZE + 25, 25);
 
-	printf("out-of-bound: %3d\n", Array_get(a, 102));
+	printf("out-of-bound: %3d\n", Array_get(a, EXAMPLE_SIZE + 25));
 
 	/* do not forget to clean up properly */
 	Array_destroy(a);
