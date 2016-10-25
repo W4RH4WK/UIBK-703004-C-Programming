@@ -56,6 +56,8 @@ know about the system you are using, the better. Understanding how components
 - Arithmetic / Conditionals
 - `if` / `else`
 - `while`
+- `enum` / `const` / `#define`
+- Basic IO / `printf` / `puts` / `putchar` / `scanf` / `getchar`
 
 ## Don't Panic!
 
