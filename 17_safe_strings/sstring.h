@@ -18,9 +18,11 @@ int String_print(const String* this);
 
 size_t String_size(const String* this);
 
+size_t String_length(const String* this);
+
 char String_get(const String* this, size_t index);
 
-char String_set(String* this, size_t index, char v);
+char String_set(const String* this, size_t index, char v);
 
 void String_toupper(String* this);
 
