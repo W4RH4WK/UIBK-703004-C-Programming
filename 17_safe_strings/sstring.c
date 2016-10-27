@@ -27,7 +27,7 @@ String* String_from_array(const char* s, size_t size) {
 	this->data = malloc(size);
 	if (this->data == NULL) {
 		free(this);
-		return this;
+		return NULL;
 	}
 
 	memcpy(this->data, s, size);
