@@ -26,6 +26,11 @@ int main(void) {
 		}
 	}
 
+	/* You can also have multiple loop indizes */
+	for (int i = 0, j = 10; i < 10; ++i, --j) {
+		printf("Iteration: %d where j = %d\n", i, j);
+	}
+
 	/* Declaring `i` in the init-part of the for-loop is only possible since
 	 * C99 and is encouraged since the it is only valid for the scope of the
 	 * for-loop.
