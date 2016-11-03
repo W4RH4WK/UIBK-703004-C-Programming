@@ -52,12 +52,12 @@ know about the system you are using, the better. Understanding how components
 ### C Programming
 
 - `Hello World` example
-- Variables / Types / `printf`
-- Arithmetic / Conditionals
-- `if` / `else`
-- `while`
+- Variables / Types
+- Arithmetic / Conditionals / Overflows / Casts
+- `if` / `else` / `switch`
+- `while` / `for` / `do while` / `continue` / `break` / `goto`
 - `enum` / `const` / `#define`
-- Basic IO / `printf` / `puts` / `putchar` / `scanf` / `getchar`
+- Basic IO: `printf` / `puts` / `putchar` / `scanf` / `getchar`
 
 ## Don't Panic!
 
