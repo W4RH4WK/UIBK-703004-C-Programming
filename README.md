@@ -58,6 +58,9 @@ know about the system you are using, the better. Understanding how components
 - `while` / `for` / `do while` / `continue` / `break` / `goto`
 - `enum` / `const` / `#define`
 - Basic IO: `printf` / `puts` / `putchar` / `scanf` / `getchar`
+- Functions: Signature / Declaration / Definition / Recursion /
+  *call-by-value* / *call-by-reference* / *pure* (side-effect free) /
+  *tail-recursion* / stack-frames (see `07_where_goes_my_stuff`)
 
 ## Don't Panic!
 
