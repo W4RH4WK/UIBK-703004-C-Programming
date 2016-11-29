@@ -61,6 +61,8 @@ know about the system you are using, the better. Understanding how components
 - Functions: Signature / Declaration / Definition / Recursion /
   *call-by-value* / *call-by-reference* / *pure* (side-effect free) /
   *tail-recursion* / stack-frames (see `07_where_goes_my_stuff`)
+- Arrays / Multi-dimensional Arrays / Strings
+- Pointer / Pointer arithmetic / `void*`
 
 ## Don't Panic!
 
