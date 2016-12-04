@@ -84,7 +84,7 @@ whenever possible.
 ### Heap
 
 Data and `.text` usually do not change over the runtime of a program, you may
-updated a global variable's value, but you do not add or remove one.
+update a global variable's value, but you do not add or remove one.
 
 When you don't know how much data will be needed at compile-time (statically)
 you have the option to request (*allocate*) the required amount at runtime
