@@ -1,4 +1,4 @@
-CFLAGS = -Wall -Wextra -Wpedantic -Werror -Wno-unused-variable -std=c99 -O2
+CFLAGS = -Wall -Wextra -pedantic -Werror -Wno-unused-variable -std=c99 -O2
 
 .PHONY: all
 all: arithmetic overflow

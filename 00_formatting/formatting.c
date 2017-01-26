@@ -8,7 +8,7 @@
  * Always provide / use a Makefile to bulid, do not invoke the compiler by
  * hand. All programs must compile with following flags:
  *
- *     CFLAGS = -Wall -Wextra -Wpedantic -Werror -std=c99 -O2
+ *     CFLAGS = -Wall -Wextra -pedantic -Werror -std=c99 -O2
  *
  */
 

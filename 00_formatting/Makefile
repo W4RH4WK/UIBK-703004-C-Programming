@@ -1,4 +1,4 @@
-CFLAGS = -Wall -Wextra -Wpedantic -Werror -std=c99 -O2
+CFLAGS = -Wall -Wextra -pedantic -Werror -std=c99 -O2
 
 # Since this is the first target, it will be executed by default.
 .PHONY: all
