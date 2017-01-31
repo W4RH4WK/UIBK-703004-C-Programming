@@ -36,6 +36,7 @@ know about the system you are using, the better. Understanding how components
 - What is the purpose of a compiler
 - Typical stages of a compiler
 - Calling `gcc` with additional flags (C standard, enables warnings)
+- Process memory layout
 
 ### Makefile
 
@@ -64,6 +65,12 @@ know about the system you are using, the better. Understanding how components
   *tail-recursion* / stack-frames (see `07_where_goes_my_stuff`)
 - Arrays / Multi-dimensional Arrays / Strings
 - Pointer / Pointer arithmetic / `void*`
+- Global variables / Scope / static local variables
+- Dynamic memory management / `malloc` / `free` / valgrind
+- Using modules / `static` / `extern` / header guards
+- IO / buffering
+- Double linked list / single linked list / `queue.h`
+- Preprocessor magic
 
 ## Don't Panic!
 
