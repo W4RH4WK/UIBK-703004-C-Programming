@@ -8,22 +8,22 @@ memory.
 
 ## Addressing Memory
 
-Lets first start with memory *addresses*. Take a look at the following graphic,
-it displays the memory a program sees as a grid. Each *cell* represents 1 byte
-and can be enumerated starting from the top left corner.
+Let's first start with memory *addresses*. Take a look at the following
+graphic, it displays the memory a program sees as a grid. Each *cell*
+represents 1 byte and can be enumerated starting from the top left corner.
 
-To help distinguish them from normal integers we write them as hexadecimal
-(prefixed with `0x`) and with leading zeros. The size of an address is given by
-the architecture. 32 bit on x86 and 64 bit on x86_64, but that's not important
-for now.
+To help distinguish memory addresses from regular integers we write them as
+hexadecimals (prefixed with `0x`) and with leading zeros. The upper bound of an
+memory addresses is given by the architecture. 32 bit on x86 and 64 bit on
+x86_64, but that's not important for now.
 
 <img alt="Memory-0" src="gfx/memory-0.png" width="231" />
 
-### Adding Variables
+### Adding Variables to the Mix
 
 Each variable has a type, holds a value and occupies space somewhere in memory.
 The next image illustrates this by showing 3 variables and a table, filled with
-that information. Sizes, values and names are just example values, but the
+mentioned information. Sizes, values and names are just example values, but the
 concept should already look familiar.
 
 The *address of a variable* is always the address of the first occupied cell.
@@ -35,20 +35,20 @@ we can exactly determine the cells used for this variable.
 ### Our First Pointer
 
 Now, equipped with this knowledge, imagine a variable which value is not an
-integer or a float, but an address. Similar to all other variables it has a
-type, a name, a value and needs to be stored somewhere in memory. Here we call
-this variable `ptr1` and its value is the starting address of `var2`.
+integer or a float, but a *memory address*. Similar to all other variables it
+has a type, a name, a value and needs to be stored somewhere in memory. Here we
+call this variable `ptr1` and its value is the *address* of `var2`.
 
 As displayed by the image below, the variable `ptr1` *points to* `var2`,
 therefore this is called a *pointer*. Even further because `ptr1` points to an
-`int`, it is a *pointer to `int`*, written as `int*`. We also assume that
+`int`, it is a *pointer to `int`*, written as `int*`. Here we assume that
 addresses are 32 bit (4 byte), hence our pointer occupies 4 byte of memory.
 
 ![Memory-2](gfx/memory-2.png)
 
 ### The Second Pointer
 
-Pointers aren't so complicated after all, huh? So lets do one more, this time
+Pointers aren't so complicated after all, huh? So let's do one more, this time
 we let it point to the start of `var3` which is of type `double`, hence our new
 pointer `ptr2` will be of type `double*`. Note that both `ptr1` and `ptr2` have
 exactly the same size in memory even though they point to variables of
@@ -59,13 +59,13 @@ different size.
 ### Pointer to Pointer
 
 Going further, there is nothing special about having a pointer point to another
-pointer. `ptr3`'s value is just the memory location of `ptr1`. Its type is a
-pointer to pointer to int, written as `int**`.
+pointer. `ptr3`'s value is just the memory address of `ptr1`. Its type is a
+*pointer to pointer to `int`*, written as `int**`.
 
 ![Memory-4](gfx/memory-4.png)
 
 This can be done multiple times as the last figure shows with `ptr4` being a
-pointer to pointer to pointer int or `int***`.
+*pointer to pointer to pointer to `int`* or `int***`.
 
 ![Memory-5](gfx/memory-5.png)
 
@@ -79,7 +79,7 @@ be used as a *sentinel* value carrying some deeper meaning and is also defined
 in C as `NULL`.
 
 A `NULL` pointer usually indicates the absence of a value, or failure of an
-operation.
+operation. You'll see this in more detail later on.
 
 ## Constructing a pointer
 
@@ -90,8 +90,8 @@ Getting a pointer to a variable is pretty easy, there is the *address operator*
 int var1 = 42;
 int* ptr_to_var1 = &var1;
 
-/* You cannot use the address operator on a literal since it is not stored in
- * memory. This will result in a compile error. */
+/* You cannot use the address operator on a literal since it is not a variable
+ * stored in memory. This will result in a compile error. */
 int* ptr_to_42 = &42;
 ```
 
